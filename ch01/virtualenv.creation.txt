@@ -1,0 +1,65 @@
+Ubuntu 20.04
+
+https://www.liquidweb.com/kb/how-to-install-and-update-python-to-3-9-in-ubuntu
+
+# optional installation steps
+fab@fvm:~$ sudo apt-get update
+fab@fvm:~$ sudo apt-get install software-properties-common
+fab@fvm:~$ sudo add-apt-repository ppa:deadsnakes/ppa
+fab@fvm:~$ sudo apt-get update
+fab@fvm:~$ sudo apt-get install python3.9 python3.9-venv python3.9-dev
+
+fab@fvm:~/srv$ mkdir my-project  # step 1
+fab@fvm:~/srv$ cd my-project
+
+fab@fvm:~/srv/my-project$ which python3.9  # check system python
+/usr/bin/python3.9  # <-- system python3.9
+
+fab@fvm:~/srv/my-project$ python3.9 -m venv lpp3ed  # step 2
+fab@fvm:~/srv/my-project$ source ./lpp3ed/bin/activate  # step 3
+
+# check python again: now using the virtual environment's one
+(lpp3ed) fab@fvm:~/srv/my-project$ which python
+/home/fab/srv/my-project/lpp3ed/bin/python
+
+(lpp3ed) fab@fvm:~/srv/my-project$ python  # step 4
+Python 3.9.2 (default, Feb 20 2021, 20:56:08)
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+(lpp3ed) fab@fvm:~/srv/my-project$ deactivate  # step 5
+fab@fvm:~/srv/my-project$
+
+
+----------------------------------------------------------------------------------------
+
+Windows 10
+Simply install from python website, then from terminal:
+
+C:\Users\Fab\srv>mkdir my-project  # step 1
+
+C:\Users\Fab\srv>cd my-project
+
+C:\Users\Fab\srv\my-project>where python  # check system python
+C:\Users\Fab\AppData\Local\Programs\Python\Python39\python.exe
+C:\Users\Fab\AppData\Local\Microsoft\WindowsApps\python.exe
+
+C:\Users\Fab\srv\my-project>python -m venv lpp3ed  # step 2
+
+C:\Users\Fab\srv\my-project>lpp3ed\Scripts\activate  # step 3
+
+# check python again, now virtual env python is listed first
+(lpp3ed) C:\Users\Fab\srv\my-project>where python
+C:\Users\Fab\srv\my-project\lpp3ed\Scripts\python.exe
+C:\Users\Fab\AppData\Local\Programs\Python\Python39\python.exe
+C:\Users\Fab\AppData\Local\Microsoft\WindowsApps\python.exe
+
+(lpp3ed) C:\Users\Fab\srv\my-project>python  # step 4
+Python 3.9.2 (tags/v3.9.2:1a79785, Feb 19 2021, 13:44:55)
+⇢ [MSC v.1928 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+(lpp3ed) C:\Users\Fab\srv\my-project>deactivate  # step 5
+C:\Users\Fab\srv\my-project>
