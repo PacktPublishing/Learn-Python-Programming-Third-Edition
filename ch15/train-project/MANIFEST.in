@@ -1,0 +1,3 @@
+# train-project/MANIFEST.in
+include CHANGELOG.md
+include train_schedule/icon.png

@@ -1,0 +1,10 @@
+# This file contains an example of the format of your ~/.pypirc
+# file
+
+[testpypi]
+  username = __token__
+  password = pypi-...
+
+[pypi]
+  username = __token__
+  password = pypi-...
