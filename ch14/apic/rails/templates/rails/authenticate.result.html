@@ -1,0 +1,38 @@
+{% extends "rails/base.html" %}
+
+{% block title %}Authentication Result{% endblock %}
+
+{% block content %}
+
+{% if token %}
+
+<p>
+    <label for="token">
+        <h3>Your JWT token:</h3>
+    </label>
+</p>
+
+<textarea id="token" name="token" rows="5" cols="60">
+{{ token }}
+</textarea>
+
+{% else %}
+
+<p>We were unable to retrieve your token.</p>
+
+{% if auth_error %}
+
+<code class="error">{{ auth_error }}</code>
+
+{% endif %}
+
+{% endif %}
+
+
+{% endblock %}
+
+{% block footer %}
+<div class="footer">
+    <a href="{% url 'authenticate' %}">Back to authenticate</a>
+</div>
+{% endblock %}

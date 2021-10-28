@@ -1,0 +1,26 @@
+{% extends "rails/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+<h1>Wecome to our Railways website!</h1>
+
+<p>Please choose which page you wish to visit below.</p>
+
+<p>
+    <a href="{% url 'stations' %}">Stations</a>
+</p>
+
+<p>
+    <a href="{% url 'users' %}">Users</a>
+</p>
+
+<p>
+    <a href="{% url 'authenticate' %}">Authentication</a>
+</p>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

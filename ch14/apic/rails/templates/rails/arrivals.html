@@ -1,0 +1,54 @@
+{% extends "rails/base.html" %}
+
+{% block title %}Arrivals{% endblock %}
+
+{% block content %}
+
+{% if arrivals %}
+    <h1>Arrivals to {{ arrivals.0.station_to.city }} ({{ arrivals.0.station_to.code }})</h1>
+{% endif %}
+
+{% for arv in arrivals %}
+
+    <div class="{% cycle 'bg_color1' 'bg_color2' %}">
+        <h3>{{ arv.name }}</h3>
+        <p>
+            <em>Departs at</em>: {{ arv.departs_at }}<br>
+            <em>Arrives at</em>: {{ arv.arrives_at }}<br>
+            <em>Cars</em>: {{ arv.first_class}} FC,
+            {{ arv.second_class }} SC
+            ({{ arv.seats_per_car }} seats/car)
+        </p>
+    </div>
+
+{% empty %}
+
+    {% if error %}
+
+        <div class=" error">
+            <h3>Error</h3>
+            <p>There was a problem connecting to the API.</p>
+            <code>{{ error }}</code>
+            <p>
+                (<em>The above error is shown to the user as an example.
+                    For security reasons these errors are normally hidden from the user</em>)
+            </p>
+        </div>
+
+    {% else %}
+
+    <div>
+        <p>There are no arrivals available at this time.</p>
+    </div>
+
+    {% endif %}
+
+{% endfor %}
+
+{% endblock %}
+
+{% block footer %}
+<div class="footer">
+    <a href="{% url 'stations' %}">Back to stations</a>
+</div>
+{% endblock %}

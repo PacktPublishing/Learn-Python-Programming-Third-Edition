@@ -1,0 +1,8 @@
+django
+fastapi
+pydantic[email]
+pyjwt[crypto]
+python-dotenv
+requests
+sqlalchemy
+uvicorn

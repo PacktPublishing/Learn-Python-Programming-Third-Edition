@@ -1,0 +1,257 @@
+$ http http://localhost:8000/stations
+HTTP/1.1 200 OK
+content-length: 702
+content-type: application/json
+date: Thu, 19 Aug 2021 22:11:10 GMT
+server: uvicorn
+
+[
+    {
+        "city": "Rome",
+        "code": "ROM",
+        "country": "Italy",
+        "id": 0
+    },
+    {
+        "city": "Paris",
+        "code": "PAR",
+        "country": "France",
+        "id": 1
+    },
+    {
+        "city": "London",
+        "code": "LDN",
+        "country": "UK",
+        "id": 2
+    },
+    {
+        "city": "Kyiv",
+        "code": "KYV",
+        "country": "Ukraine",
+        "id": 3
+    },
+    {
+        "city": "Stockholm",
+        "code": "STK",
+        "country": "Sweden",
+        "id": 4
+    },
+    {
+        "city": "Warsaw",
+        "code": "WSW",
+        "country": "Poland",
+        "id": 5
+    },
+    {
+        "city": "Moskow",
+        "code": "MSK",
+        "country": "Russia",
+        "id": 6
+    },
+    {
+        "city": "Amsterdam",
+        "code": "AMD",
+        "country": "Netherlands",
+        "id": 7
+    },
+    {
+        "city": "Edinburgh",
+        "code": "EDB",
+        "country": "Scotland",
+        "id": 8
+    },
+    {
+        "city": "Budapest",
+        "code": "BDP",
+        "country": "Hungary",
+        "id": 9
+    },
+    {
+        "city": "Bucharest",
+        "code": "BCR",
+        "country": "Romania",
+        "id": 10
+    },
+    {
+        "city": "Sofia",
+        "code": "SFA",
+        "country": "Bulgaria",
+        "id": 11
+    }
+]
+
+
+---
+
+$ http http://localhost:8000/stations?code=LDN
+HTTP/1.1 200 OK
+content-length: 54
+content-type: application/json
+date: Fri, 20 Aug 2021 19:31:08 GMT
+server: uvicorn
+
+[
+    {
+        "city": "London",
+        "code": "LDN",
+        "country": "UK",
+        "id": 2
+    }
+]
+
+---
+
+$ http http://localhost:8000/stations/3
+HTTP/1.1 200 OK
+content-length: 55
+content-type: application/json
+date: Fri, 20 Aug 2021 19:38:36 GMT
+server: uvicorn
+
+{
+    "city": "Kyiv",
+    "code": "KYV",
+    "country": "Ukraine",
+    "id": 3
+}
+
+---
+
+$ http http://localhost:8000/stations/kyiv
+HTTP/1.1 422 Unprocessable Entity
+content-length: 107
+content-type: application/json
+date: Fri, 20 Aug 2021 19:42:34 GMT
+server: uvicorn
+
+{
+    "detail": [
+        {
+            "loc": [
+                "path",
+                "station_id"
+            ],
+            "msg": "value is not a valid integer",
+            "type": "type_error.integer"
+        }
+    ]
+}
+
+---
+
+$ http http://localhost:8000/stations/100
+HTTP/1.1 404 Not Found
+content-length: 35
+content-type: application/json
+date: Fri, 20 Aug 2021 19:48:09 GMT
+server: uvicorn
+
+{
+    "detail": "Station 100 not found."
+}
+
+
+---
+
+$ http POST http://localhost:8000/stations \
+code=TMP country=Temporary-Country city=tmp-city
+HTTP/1.1 201 Created
+content-length: 70
+content-type: application/json
+date: Fri, 20 Aug 2021 20:20:34 GMT
+server: uvicorn
+
+{
+    "city": "tmp-city",
+    "code": "TMP",
+    "country": "Temporary-Country",
+    "id": 12
+}
+
+---
+
+$ http POST http://localhost:8000/stations \
+country=Another-Country city=another-city
+HTTP/1.1 422 Unprocessable Entity
+content-length: 88
+content-type: application/json
+date: Fri, 20 Aug 2021 20:23:21 GMT
+server: uvicorn
+
+{
+    "detail": [
+        {
+            "loc": [
+                "body",
+                "code"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        }
+    ]
+}
+
+---
+
+$ http PUT http://localhost:8000/stations/12 \
+code=SMC country=Some-Country city=Some-city
+HTTP/1.1 204 No Content
+date: Fri, 20 Aug 2021 21:19:22 GMT
+server: uvicorn
+
+---
+
+$ http http://localhost:8000/stations/12
+HTTP/1.1 200 OK
+content-length: 66
+content-type: application/json
+date: Fri, 20 Aug 2021 21:20:39 GMT
+server: uvicorn
+
+{
+    "city": "Some-city",
+    "code": "SMC",
+    "country": "Some-Country",
+    "id": 12
+}
+
+---
+
+$ http PUT http://localhost:8000/stations/12 code=xxx
+HTTP/1.1 204 No Content
+date: Fri, 20 Aug 2021 21:23:09 GMT
+server: uvicorn
+
+---
+
+$ http http://localhost:8000/stations/12
+HTTP/1.1 200 OK
+content-length: 66
+content-type: application/json
+date: Fri, 20 Aug 2021 21:23:47 GMT
+server: uvicorn
+
+{
+    "city": "Some-city",
+    "code": "xxx",
+    "country": "Some-Country",
+    "id": 12
+}
+
+
+---
+
+$ http DELETE http://localhost:8000/stations/12
+HTTP/1.1 204 No Content
+date: Fri, 20 Aug 2021 21:33:17 GMT
+server: uvicorn
+
+---
+
+$ http DELETE http://localhost:8000/stations/12
+HTTP/1.1 404 Not Found
+Transfer-Encoding: chunked
+date: Fri, 20 Aug 2021 21:33:43 GMT
+server: uvicorn
+
+---

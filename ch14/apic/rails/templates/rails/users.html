@@ -1,0 +1,50 @@
+{% extends "rails/base.html" %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+
+{% if users %}
+    <h1>Users</h1>
+{% endif %}
+
+{% for user in users %}
+
+<div class="{% cycle 'bg_color1' 'bg_color2' %}">
+    <p>Id: {{ user.id }} &lt;{{ user.full_name }}
+        (<a href="mailto: {{ user.email }})">{{ user.email }}</a>&gt;
+        {{ user.role|capfirst }}
+    </p>
+</div>
+
+{% empty %}
+
+    {% if error %}
+
+        <div class=" error">
+            <h3>Error</h3>
+            <p>There was a problem connecting to the API.</p>
+            <code>{{ error }}</code>
+            <p>
+                (<em>The above error is shown to the user as an example.
+                    For security reasons these errors are normally hidden from the user</em>)
+            </p>
+        </div>
+
+    {% else %}
+
+    <div>
+        <p>There are no users available at this time.</p>
+    </div>
+
+    {% endif %}
+
+{% endfor %}
+
+{% endblock %}
+
+{% block footer %}
+<div class="footer">
+    <a href="{% url 'index' %}">Home</a>
+</div>
+{% endblock %}

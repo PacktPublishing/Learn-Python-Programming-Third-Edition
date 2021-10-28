@@ -1,0 +1,29 @@
+body {
+  font-family: "Georgia", Times, serif;
+}
+
+.bg_color1 {
+    background-color: lightsteelblue;
+    padding: 0.1em 0 0.1em 0.8em;
+}
+
+.bg_color2 {
+    background-color:whitesmoke;
+    padding: 0.1em 0 0.1em 0.8em;
+}
+
+.footer {
+    padding-top: 1em;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    color:steelblue;
+}
+
+.error {
+    color:darkred;
+}

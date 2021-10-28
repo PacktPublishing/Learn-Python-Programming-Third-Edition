@@ -1,0 +1,21 @@
+{% extends "rails/base.html" %}
+
+{% block title %}Authentication{% endblock %}
+
+{% block content %}
+
+    <h1>Authentication</h1>
+
+    <form action="{% url 'authenticate' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Authenticate">
+    </form>
+
+{% endblock %}
+
+{% block footer %}
+<div class="footer">
+    <a href="{% url 'index' %}">Home</a>
+</div>
+{% endblock %}

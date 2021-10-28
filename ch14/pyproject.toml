@@ -1,0 +1,6 @@
+[tool.black]
+line-length = 66
+
+[tool.isort]
+atomic=true
+line_length=66

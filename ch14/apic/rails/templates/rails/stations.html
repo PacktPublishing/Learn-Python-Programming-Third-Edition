@@ -1,0 +1,52 @@
+{% extends "rails/base.html" %}
+
+{% block title %}Stations{% endblock %}
+
+{% block content %}
+
+{% if stations %}
+  <h1>Stations</h1>
+{% endif %}
+
+{% for station in stations %}
+
+  <div class="{% cycle 'bg_color1' 'bg_color2' %}">
+    <p>Id: {{ station.id }} &lt;Code: {{ station.code }}
+      ({{ station.city }}, {{ station.country }})&gt;&nbsp;
+      <a href="{% url 'departures' station.id %}">Departures</a> -
+      <a href="{% url 'arrivals' station.id %}"">Arrivals</a>
+      </p>
+  </div>
+
+{% empty %}
+
+  {% if error %}
+
+    <div class=" error">
+      <h3>Error</h3>
+      <p>There was a problem connecting to the API.</p>
+      <code>{{ error }}</code>
+      <p>
+        (<em>The above error is shown to the user as an example.
+          For security reasons these errors are normally hidden
+          from the user</em>)
+      </p>
+    </div>
+
+  {% else %}
+
+    <div>
+      <p>There are no stations available at this time.</p>
+    </div>
+
+  {% endif %}
+
+{% endfor %}
+
+{% endblock %}
+
+{% block footer %}
+<div class="footer">
+  <a href="{% url 'index' %}">Home</a>
+</div>
+{% endblock %}
