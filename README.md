@@ -29,6 +29,16 @@ that might suit you better.
 We have given the virtual environment folder the name `.venv`. Feel free
 to choose any other name that you might want.
 
+---
+
+Note: the above procedure might fail in some of the chapter folders, due
+to the presence of files that aren't meant to be run. If that is the case, you
+should choose another folder where to place your virtual environment. You can
+create one within the chapter folder itself, or place the virtual environment
+outside of the chapter folder altogether.
+
+---
+
 Next step is to activate the virtual environment:
 
     $ source  .venv/bin/activate
