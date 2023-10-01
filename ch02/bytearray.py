@@ -6,7 +6,7 @@ print(bytearray(10))  # zero-filled instance with given length
 
 print(bytearray(range(5)))  # bytearray from iterable of integers
 
-name = bytearray(b'Lina')  #A - bytearray from bytes
+name = bytearray(b'Lina')  # bytearray from bytes
 print(name.replace(b'L', b'l'))
 
 print(name.endswith(b'na'))

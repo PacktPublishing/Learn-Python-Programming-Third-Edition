@@ -6,6 +6,7 @@ def local():
     # m is finally found in the global scope
     print(m, 'printing from the local scope')
 
+
 m = 5
 print(m, 'printing from the global scope')
 

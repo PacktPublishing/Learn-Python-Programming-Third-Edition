@@ -1,6 +1,6 @@
 import pprint
 
-pp = pprint.PrettyPrinter(indent = 4)
+pp = pprint.PrettyPrinter(indent=4)
 
 n = 3  # integer number
 address = "221b Baker Street, NW1 6XE, London"  # Sherlock Holmes' address

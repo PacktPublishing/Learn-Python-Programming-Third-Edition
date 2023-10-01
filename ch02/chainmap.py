@@ -3,7 +3,7 @@
 from collections import ChainMap
 default_connection = {'host': 'localhost', 'port': 4567}
 connection = {'port': 5678}
-conn = ChainMap(connection, default_connection) # map creation
+conn = ChainMap(connection, default_connection)  # map creation
 print(conn['port'])  # port is found in the first dictionary
 
 print(conn['host'])  # host is fetched from the second dictionary

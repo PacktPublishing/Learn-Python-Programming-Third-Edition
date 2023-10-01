@@ -8,6 +8,7 @@ class Bike:
     def brake(self):
         print("Braking!")
 
+
 # let's create a couple of instances
 red_bike = Bike('Red', 'Carbon fiber')
 blue_bike = Bike('Blue', 'Steel')

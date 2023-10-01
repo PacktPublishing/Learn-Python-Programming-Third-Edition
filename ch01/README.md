@@ -1,5 +1,4 @@
-Chapter 1 data files
-====================
+# Chapter 1 data files
 
 The files in this folder are not supposed to work if run.
 They serve as source for the book chapters, and to provide a

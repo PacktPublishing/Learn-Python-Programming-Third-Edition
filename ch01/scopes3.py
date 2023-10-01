@@ -13,6 +13,7 @@ def enclosing_func():
     # calling the function local
     local()
 
+
 m = 5
 print(m, 'printing from the global scope')
 

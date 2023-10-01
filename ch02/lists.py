@@ -4,21 +4,17 @@
 print([])  # empty list
 print(list())  # same as []
 print([1, 2, 3])  # as with tuples, items are comma separated
-# [1, 2, 3]
-# >>> [x + 5 for x in [2, 3, 4]]  # Python is magic
-# [7, 8, 9]
-# >>> list((1, 3, 5, 7, 9))  # list from a tuple
-# [1, 3, 5, 7, 9]
-# >>> list('hello')  # list from a string
-# ['h', 'e', 'l', 'l', 'o']
 
+print([x + 5 for x in [2, 3, 4]])  # Python is magic
+print(list((1, 3, 5, 7, 9)))  # list from a tuple
+print(list('hello'))  # list from a string
 
-# # main methods
-# >>> a = [1, 2, 1, 3]
-# >>> a.append(13)  # we can append anything at the end
-# >>> a
-# [1, 2, 1, 3, 13]
-# >>> a.count(1)  # how many `1` are there in the list?
+# main methods
+a = [1, 2, 1, 3]
+a.append(13)  # we can append anything at the end
+print(a)
+
+print(a.count(1))  # how many `1` are there in the list?
 # 2
 # >>> a.extend([5, 7])  # extend the list by another (or sequence)
 # >>> a

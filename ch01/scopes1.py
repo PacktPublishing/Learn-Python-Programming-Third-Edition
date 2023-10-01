@@ -5,6 +5,7 @@ def local():
     m = 7
     print(m)
 
+
 # we define m within the global scope
 m = 5
 

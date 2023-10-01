@@ -3,6 +3,8 @@ from datetime import date, datetime, timedelta, timezone
 import time
 import calendar as cal
 from zoneinfo import ZoneInfo
+# arrow small demo
+import arrow
 
 # date
 today = date.today()
@@ -68,9 +70,6 @@ print(datetime.fromisoformat('1977-11-24T19:30:13+01:00'))
 print(datetime.fromtimestamp(time.time()))
 
 print(datetime.now())
-
-# arrow small demo
-import arrow
 
 print(arrow.utcnow())
 print(arrow.now())
