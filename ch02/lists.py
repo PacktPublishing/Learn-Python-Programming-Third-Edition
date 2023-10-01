@@ -16,8 +16,8 @@ print(a)
 
 print(a.count(1))  # how many `1` are there in the list?
 
-print(a.extend([5, 7]))  # extend the list by another (or sequence)
-# >>> a
+a.extend([5, 7])  # extend the list by another (or sequence)
+print(a)
 # [1, 2, 1, 3, 13, 5, 7]
 # >>> a.index(13)  # position of `13` in the list (0-based indexing)
 # 4
