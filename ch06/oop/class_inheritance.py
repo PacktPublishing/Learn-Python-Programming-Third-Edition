@@ -1,4 +1,4 @@
-# oop/class_inheritance.py
+# oop/class.inheritance.py
 class Engine:
     def start(self):
         pass
