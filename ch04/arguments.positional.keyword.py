@@ -2,9 +2,10 @@
 def func(a, b, c):
     print(a, b, c)
 
+
 func(42, b=1, c=2)
 
-func(b=1, c=2, 42)  # positional argument after keyword arguments
+# func(b=1, c=2, 42)  # positional argument after keyword arguments
 
 """
 $ python arguments.positional.keyword.py
