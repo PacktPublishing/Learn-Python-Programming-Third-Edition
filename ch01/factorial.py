@@ -1,3 +1,4 @@
->>> from math import factorial
->>> factorial(5)
-120
+from math import factorial
+
+print(factorial(5))
+# 120

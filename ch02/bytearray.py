@@ -1,18 +1,16 @@
 # bytearray.py
 
+print(bytearray())  # empty bytearray object
 
->>> bytearray()  # empty bytearray object
-bytearray(b'')
->>> bytearray(10)  # zero-filled instance with given length
-bytearray(b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
->>> bytearray(range(5))  # bytearray from iterable of integers
-bytearray(b'\x00\x01\x02\x03\x04')
->>> name = bytearray(b'Lina')  #A - bytearray from bytes
->>> name.replace(b'L', b'l')
-bytearray(b'lina')
->>> name.endswith(b'na')
-True
->>> name.upper()
-bytearray(b'LINA')
->>> name.count(b'L')
-1
+print(bytearray(10))  # zero-filled instance with given length
+
+print(bytearray(range(5)))  # bytearray from iterable of integers
+
+name = bytearray(b'Lina')  #A - bytearray from bytes
+print(name.replace(b'L', b'l'))
+
+print(name.endswith(b'na'))
+
+print(name.upper())
+
+print(name.count(b'L'))

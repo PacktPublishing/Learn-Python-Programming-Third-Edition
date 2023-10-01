@@ -1,6 +1,5 @@
 # Local, Enclosing and Global
 
-
 def enclosing_func():
     m = 13
 
