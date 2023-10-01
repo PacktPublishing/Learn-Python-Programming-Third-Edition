@@ -2,39 +2,39 @@
 # This is not a valid Python module - Don't run it.
 
 # ONE DECORATOR
-def func(arg1, arg2, ...):
-    pass
+# def func(arg1, arg2, ...):
+#     pass
 
-func = decorator(func)
+# func = decorator(func)
 
-# is equivalent to the following:
+# # is equivalent to the following:
 
-@decorator
-def func(arg1, arg2, ...):
-    pass
+# @decorator
+# def func(arg1, arg2, ...):
+#     pass
 
 
-# TWO DECORATORS
-def func(arg1, arg2, ...):
-    pass
+# # TWO DECORATORS
+# def func(arg1, arg2, ...):
+#     pass
 
-func = deco1(deco2(func))
+# func = deco1(deco2(func))
 
-# is equivalent to the following:
+# # is equivalent to the following:
 
-@deco1
-@deco2
-def func(arg1, arg2, ...):
-    pass
+# @deco1
+# @deco2
+# def func(arg1, arg2, ...):
+#     pass
 
-# DECORATOR WITH ARGUMENTS
-def func(arg1, arg2, ...):
-    pass
+# # DECORATOR WITH ARGUMENTS
+# def func(arg1, arg2, ...):
+#     pass
 
-func = decoarg(arg_a, arg_b)(func)
+# func = decoarg(arg_a, arg_b)(func)
 
-# is equivalent to the following:
+# # is equivalent to the following:
 
-@decoarg(arg_a, arg_b)
-def func(arg1, arg2, ...):
-    pass
+# @decoarg(arg_a, arg_b)
+# def func(arg1, arg2, ...):
+#     pass
