@@ -5,6 +5,7 @@ def counter(start=0):
         yield n
         n += 1
 
+
 c = counter()
 print(next(c))  # prints: 0
 print(next(c))  # prints: 1

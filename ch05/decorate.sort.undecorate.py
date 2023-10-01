@@ -13,6 +13,8 @@ students = [
 def decorate(student):
     # create a 2-tuple (sum of credits, student) from student dict
     return (sum(student['credits'].values()), student)
+
+
 pprint(decorate(students[0]))
 
 
