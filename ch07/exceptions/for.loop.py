@@ -2,9 +2,11 @@
 n = 100
 found = False
 for a in range(n):
-    if found: break
+    if found:
+        break
     for b in range(n):
-        if found: break
+        if found:
+            break
         for c in range(n):
             if 42 * a + 17 * b + c == 5096:
                 found = True
@@ -13,6 +15,7 @@ for a in range(n):
 
 class ExitLoopException(Exception):
     pass
+
 
 try:
     n = 100

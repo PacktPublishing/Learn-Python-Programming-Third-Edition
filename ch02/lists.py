@@ -18,10 +18,10 @@ print(a.count(1))  # how many `1` are there in the list?
 
 a.extend([5, 7])  # extend the list by another (or sequence)
 print(a)
-# [1, 2, 1, 3, 13, 5, 7]
-# >>> a.index(13)  # position of `13` in the list (0-based indexing)
-# 4
-# >>> a.insert(0, 17)  # insert `17` at position 0
+
+print(a.index(13))  # position of `13` in the list (0-based indexing)
+
+print(a.insert(0, 17))  # insert `17` at position 0
 # >>> a
 # [17, 1, 2, 1, 3, 13, 5, 7]
 # >>> a.pop()  # pop (remove and return) last element

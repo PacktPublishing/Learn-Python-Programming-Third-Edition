@@ -12,6 +12,7 @@ def try_syntax(numerator, denominator):
     finally:
         print('Exiting')
 
+
 print(try_syntax(12, 4))
 print(try_syntax(11, 0))
 

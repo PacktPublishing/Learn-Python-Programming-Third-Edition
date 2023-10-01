@@ -1,6 +1,7 @@
 # context/generator.py
 from contextlib import contextmanager
 
+
 @contextmanager
 def my_context_manager():
     print("Entering 'with' context")

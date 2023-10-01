@@ -1,5 +1,6 @@
 # context/decimal.prec.py
 from decimal import Context, Decimal, getcontext, setcontext
+from decimal import localcontext
 
 one = Decimal("1")
 three = Decimal("3")
@@ -33,8 +34,6 @@ finally:
     setcontext(orig_ctx)
 print(one / three)
 
-
-from decimal import localcontext
 
 with localcontext(Context(prec=5)) as ctx:
     print(ctx)
