@@ -4,13 +4,11 @@
 
 cubes = [k**3 for k in range(10)]  # regular list
 print(cubes)
-
 print(type(cubes))
-# <class 'list'>
-# >>> cubes_gen = (k**3 for k in range(10))  # create as generator
-# >>> cubes_gen
-# <generator object <genexpr> at 0x103fb5a98>
-# >>> type(cubes_gen)
+
+cubes_gen = (k**3 for k in range(10))  # create as generator
+print(cubes_gen)
+print(type(cubes_gen))
 # <class 'generator'>
 # >>> list(cubes_gen)  # this will exhaust the generator
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]

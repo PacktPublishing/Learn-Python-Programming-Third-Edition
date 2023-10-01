@@ -8,8 +8,9 @@ def counter(start=0):
             break
         n += 1
 
+
 c = counter()
 print(next(c))         # C
 print(c.send('Wow!'))  # D
 print(next(c))         # E
-print(c.send('Q'))     # F
+# print(c.send('Q'))     # F
