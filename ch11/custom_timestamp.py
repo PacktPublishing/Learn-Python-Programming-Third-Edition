@@ -6,13 +6,13 @@ def debug(*msg, timestamp=[None]):
     print(*msg)
     from time import time  # local import
     if timestamp[0] is None:
-        timestamp[0] = time()  #1
+        timestamp[0] = time()  # 1
     else:
         now = time()
         print(
             ' Time elapsed: {:.3f}s'.format(now - timestamp[0])
         )
-        timestamp[0] = now  #2
+        timestamp[0] = now  # 2
 
 
 debug('Entering nasty piece of code...')

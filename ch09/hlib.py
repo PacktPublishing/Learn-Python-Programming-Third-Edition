@@ -28,6 +28,6 @@ print(h1.hexdigest())
 print(h2.hexdigest())
 print(h3.hexdigest())
 
-dk = hashlib.pbkdf2_hmac('sha256', b'Password123', salt=os.urandom(16), 
+dk = hashlib.pbkdf2_hmac('sha256', b'Password123', salt=os.urandom(16),
                          iterations=100000)
 print(dk.hex())

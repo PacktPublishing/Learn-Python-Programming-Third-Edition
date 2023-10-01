@@ -31,6 +31,8 @@ $ python -m cProfile profiling/triples_v3.py
         1    0.000    0.000    0.269    0.269 triples_v3.py:3(<module>)
         1    0.116    0.116    0.269    0.269 triples_v3.py:3(calc_triples)
         1    0.000    0.000    0.269    0.269 {built-in method builtins.exec}
-     1034    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
-        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+     1034    0.000    0.000    0.000    0.000 {method 'append' of 'list'
+     objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of
+        '_lsprof.Profiler' objects}
 """

@@ -31,7 +31,10 @@ Ordered by: standard name
         1    0.000    0.000    0.489    0.489 triples.py:3(<module>)
         1    0.121    0.121    0.489    0.489 triples.py:3(calc_triples)
         1    0.000    0.000    0.489    0.489 {built-in method builtins.exec}
-     1034    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
-        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-   500500    0.021    0.000    0.021    0.000 {method 'is_integer' of 'float' objects}
+     1034    0.000    0.000    0.000    0.000 {method 'append' of 'list'
+     objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of
+        '_lsprof.Profiler' objects}
+   500500    0.021    0.000    0.021    0.000 {method 'is_integer' of 'float'
+   objects}
 """
