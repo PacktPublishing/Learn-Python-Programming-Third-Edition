@@ -8,5 +8,5 @@ print(p.is_file())        # True
 print(path)               # /Users/fab/srv/lpp3e/ch08/files
 print(path.is_dir())      # True
 
-q = Path('/Users/fab/srv/lpp3e/ch08/files')
+q = Path(path)
 print(q.is_dir())         # True

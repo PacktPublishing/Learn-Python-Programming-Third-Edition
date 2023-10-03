@@ -34,7 +34,8 @@ True
 False
 Darth Vader
 Traceback (most recent call last):
-  File "/Users/fab/srv/lpp3e/v3/ch06/oop/class.namespaces.py", line 21, in <module>
+  File "/Users/fab/srv/lpp3e/v3/ch06/oop/class.namespaces.py", line 21, 
+  in <module>
     print(Person.name)
 AttributeError: type object 'Person' has no attribute 'name'
 """

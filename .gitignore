@@ -1,2 +1,12 @@
 .venv
 __pycache__
+*.tar.gz
+*.zip
+extract_tar
+extract_zip
+raef.txt
+example.bin
+fear_copy.txt
+write_x.txt
+data.pickle
+*.db

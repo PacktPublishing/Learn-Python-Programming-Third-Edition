@@ -1,26 +1,23 @@
 # sequences.py
 
-
 # strings
 # 4 ways to make a string
-# >>> str1 = 'This is a string. We built it with single quotes.'
-# >>> str2 = "This is also a string, but built with double quotes."
-# >>> str3 = '''This is built using triple quotes,
-# ... so it can span multiple lines.'''
-# >>> str4 = """This too
-# ... is a multiline one
-# ... built with triple double-quotes."""
-# >>> str4  #A
-# 'This too\nis a multiline one\nbuilt with triple double-quotes.'
-# >>> print(str4)  #B
-# This too
-# is a multiline one
-# built with triple double-quotes.
+str1 = 'This is a string. We built it with single quotes.'
+str2 = "This is also a string, but built with double quotes."
 
-# >>> s = 'Hello There'
-# >>> s.removeprefix('Hell')
-# 'o There'
-# >>> s.removesuffix('here')
+str3 = '''This is built using triple quotes,
+so it can span multiple lines.'''
+
+str4 = """This too
+is a multiline one
+built with triple double-quotes."""
+
+print(str3)  # A
+print(str4)  # B
+
+s = 'Hello There'
+print(s.removeprefix('Hell'))
+print(s.removesuffix('here'))
 # 'Hello T'
 # >>> s.removeprefix('Ooops')
 # 'Hello There'

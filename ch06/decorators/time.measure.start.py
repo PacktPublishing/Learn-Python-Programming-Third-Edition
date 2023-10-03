@@ -5,6 +5,7 @@ from time import sleep, time
 def f():
     sleep(.3)
 
+
 def g():
     sleep(.5)
 

@@ -3,6 +3,7 @@ class Person:
     def __init__(self, age):
         self.age = age  # anyone can modify this freely
 
+
 class PersonWithAccessors:
     def __init__(self, age):
         self._age = age
@@ -15,6 +16,7 @@ class PersonWithAccessors:
             self._age = age
         else:
             raise ValueError('Age must be within [18, 99]')
+
 
 class PersonPythonic:
     def __init__(self, age):
@@ -30,6 +32,7 @@ class PersonPythonic:
             self._age = age
         else:
             raise ValueError('Age must be within [18, 99]')
+
 
 person = PersonPythonic(39)
 print(person.age)  # 39 - Notice we access as data attribute

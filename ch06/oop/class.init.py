@@ -7,6 +7,7 @@ class Rectangle:
     def area(self):
         return self.side_a * self.side_b
 
+
 r1 = Rectangle(10, 4)
 print(r1.side_a, r1.side_b)  # 10 4
 print(r1.area())  # 40

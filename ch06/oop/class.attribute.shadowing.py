@@ -3,6 +3,7 @@ class Point:
     x = 10
     y = 7
 
+
 p = Point()
 print(p.x)  # 10 (from class attribute)
 print(p.y)  # 7 (from class attribute)
@@ -30,7 +31,8 @@ $ python class.attribute.shadowing.py
 10
 3
 Traceback (most recent call last):
-  File "/Users/fab/srv/lpp3e/v3/ch06/oop/class.attribute.shadowing.py", line 20, in <module>
+  File "/Users/fab/srv/lpp3e/v3/ch06/oop/class.attribute.shadowing.py", 
+  line 20, in <module>
     print(Point.z)
 AttributeError: type object 'Point' has no attribute 'z'
 """

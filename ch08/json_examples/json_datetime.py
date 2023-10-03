@@ -2,6 +2,7 @@
 # exercise: do the same for date
 import json
 from datetime import datetime, timedelta, timezone
+from pprint import pprint
 
 
 now = datetime.now()
@@ -49,7 +50,6 @@ def object_hook(obj):
 
 
 data_out = json.loads(json_data, object_hook=object_hook)
-from pprint import pprint
 pprint(data_out, indent=2)
 print(data_out)
 

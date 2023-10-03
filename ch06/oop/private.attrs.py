@@ -6,6 +6,7 @@ class A:
     def op1(self):
         print('Op1 with factor {}...'.format(self._factor))
 
+
 class B(A):
     def op2(self, factor):
         self._factor = factor

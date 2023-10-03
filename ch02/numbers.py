@@ -26,20 +26,20 @@ print(pow(10, -3))
 
 print(10 ** -3)
 
-# >>> pow(123, 4)
-# 228886641
-# >>> pow(123, 4, 100)
+print(pow(123, 4))
+print(pow(123, 4, 100))
 # 41  # notice: 228886641 % 100 == 41
-# >>> pow(37, -1, 43)  # modular inverse of 37 mod 43
+
+print(pow(37, -1, 43))  # modular inverse of 37 mod 43
 # 7
-# >>> 7 * 37 % 43  # proof the above is correct
+
+print(7 * 37 % 43)  # proof the above is correct
 # 1
 
-
 # integer and true division
-# >>> 7 / 4  # true division
-# 1.75
-# >>> 7 // 4  # integer division, truncation returns 1
+print(7 / 4)  # true division
+
+print(7 // 4)  # integer division, truncation returns 1
 # 1
 # >>> -7 / 4  # true division again, result is opposite of previous
 # -1.75

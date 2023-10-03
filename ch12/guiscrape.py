@@ -1,5 +1,5 @@
 # guiscrape.py
-from tkinter import Tk, ttk, filedialog, messagebox
+from tkinter import Tk, ttk, filedialog, messagebox, StringVar, Listbox
 import base64
 import json
 from pathlib import Path

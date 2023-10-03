@@ -35,7 +35,7 @@ obi1 = session.query(Person).filter(
 print(obi1, obi1.addresses)
 
 anakin = session.query(Person).filter(
-    Person.name=='Anakin Skywalker'
+    Person.name == 'Anakin Skywalker'
 ).first()
 print(anakin, anakin.addresses)
 
