@@ -1,4 +1,6 @@
 # this code is not supposed to be run
+day_number = 3
+
 if 1 <= day_number <= 5:
     day = 'Weekday'
 elif day_number == 6:

@@ -4,28 +4,17 @@ from math import pow
 # integers
 a = 14
 b = 3
-print(a + b)  # addition
-
-print(a - b)  # subtraction
-
-print(a * b)  # multiplication
-
-print(a / b)  # true division
-
+print(a + b)   # addition
+print(a - b)   # subtraction
+print(a * b)   # multiplication
+print(a / b)   # true division
 print(a // b)  # integer division
-
-print(a % b)  # modulo operation (reminder of division)
-
+print(a % b)   # modulo operation (reminder of division)
 print(a ** b)  # power operation
-
 print(pow(10, 3))
-
 print(10 ** 3)
-
 print(pow(10, -3))
-
 print(10 ** -3)
-
 print(pow(123, 4))
 print(pow(123, 4, 100))
 # 41  # notice: 228886641 % 100 == 41
@@ -38,17 +27,12 @@ print(7 * 37 % 43)  # proof the above is correct
 
 # integer and true division
 print(7 / 4)  # true division
-
 print(7 // 4)  # integer division, truncation returns 1
-# 1
-# >>> -7 / 4  # true division again, result is opposite of previous
-# -1.75
-# >>> -7 // 4  # integer div., result not the opposite of previous
-# -2
+print(-7 / 4)  # true division again, result is opposite of previous
+print(-7 // 4)  # integer div., result not the opposite of previous
 
-# # modulo operator
-# >>> 10 % 3  # remainder of the division 10 // 3
-# 1
+# modulo operator
+print(10 % 3)  # remainder of the division 10 // 3
 # >>> 10 % 4  # remainder of the division 10 // 4
 # 2
 
