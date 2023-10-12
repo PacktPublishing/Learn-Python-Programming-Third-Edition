@@ -1,12 +1,13 @@
 # docstrings.py
 def square(n):
-    """Return the square of a number n. """
+    """Return the square of a number n."""
     return n ** 2
 
 
 def get_username(userid):
-    """Return the username of a user given their id. """
-    return db.get(user_id=userid).username
+    """Return the username of a user given their id."""
+    # return db.get(user_id=userid).username
+    return userid
 
 
 def connect(host, port, user, password):
@@ -22,4 +23,5 @@ def connect(host, port, user, password):
     :return: The connection object.
     """
     # body of the function here...
+    connection = ""
     return connection

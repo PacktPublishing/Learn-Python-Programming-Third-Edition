@@ -9,3 +9,6 @@ from core.models import (  # multiline import
     Exercise,
     Solution,
 )
+
+print(datetime.date)
+print(timezone.tzname)
