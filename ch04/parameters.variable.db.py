@@ -10,6 +10,7 @@ def connect(**options):
     # we then connect to the db (commented out)
     # db.connect(**conn_params)
 
+
 connect()
 connect(host='127.0.0.42', port=5433)
 connect(port=5431, user='fab', pwd='gandalf')
