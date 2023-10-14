@@ -10,3 +10,4 @@ fear_copy.txt
 write_x.txt
 data.pickle
 *.db
+.pytest_cache

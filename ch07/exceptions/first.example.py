@@ -2,12 +2,12 @@
 # This is not a valid Python module - Don't run it.
 # a few examples of exceptions
 
-# gen = (n for n in range(2))
-# next(gen)
+gen = (n for n in range(2))
+next(gen)
 
-# next(gen)
+next(gen)
 
-# >>> next(gen)
+next(gen)
 # Traceback (most recent call last):
 #   File "<stdin>", line 1, in <module>
 # StopIteration

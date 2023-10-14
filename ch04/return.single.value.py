@@ -7,5 +7,6 @@ def factorial(n):
         result *= k
     return result
 
+
 f5 = factorial(5)  # f5 = 120
 print(f5)
